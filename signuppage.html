@@ -1,0 +1,116 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Signup</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+        <script src="/js/validation.js" defer></script>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+                height: 100vh; 
+                background-image: url('image/bg.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 0; 
+            }
+            .glow-box {
+                width: 300px;
+                max-width: 800px; 
+                padding: 20px; 
+                background-color: transparent ;
+                border-radius: 8px; 
+                box-shadow: 0 2px 10px rgb(0, 0, 0); 
+                margin-left: 500px;
+                margin-right: auto;
+                /* Add the glowing border effect */
+                border: 2px solid transparent; /* Add a transparent border as a base */
+                box-shadow:
+                            0 0 40px rgb(0, 0, 0);
+                            
+                animation: glowEffect 4s linear infinite; /* Animation */
+            }
+           
+
+            /* Define the glow effect using keyframes */
+            @keyframes glowEffect {
+                
+                100% {
+                    box-shadow: 0 0 50px rgb(34, 131, 249),
+                    0 0 40px #ff58cd,
+                    0 0 40px rgb(218, 0, 237);
+                }
+            }
+
+            label {
+                color: rgb(252, 252, 252); 
+            }
+
+            h1 {
+                margin-left: 90px;
+                margin-top: 15px;
+                margin-bottom: 30px;
+                
+                color: rgb(4, 201, 255);
+               
+            }
+
+            button {
+                background: rgb(218, 0, 237);
+                background-color: rgb(4, 201, 255);
+                margin-top: 20px;
+                margin-left: 90px;
+            }
+
+            input {
+                margin-top: 20px;
+                width: 280px;
+                border: 2px solid transparent;
+                
+            }
+            p{
+                margin-left: 30px;
+                color: azure;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        
+
+        <form action="myprocess.php" method="post" id="signup" class="glow-box" novalidate>
+            <h1>Signup</h1>
+            <div>
+
+                <input type="text" id="name" name="name" placeholder="Name">
+            </div>
+
+            <div>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+
+            <div>
+                <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password">
+            </div>
+
+            <button>Sign up</button>
+            <div>
+                <p>Already have an account? <a href="loginpage.php">Log in</a></p>
+            </div>
+        </form>
+
+    </body>
+
+    </html>
